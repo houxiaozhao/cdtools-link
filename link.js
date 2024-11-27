@@ -55,6 +55,53 @@ const links = [
         return;
     }
 
+    // 添加统计和广告代码
+    function insertAnalytics() {
+        // 51LA统计
+        if (!document.getElementById('LA_COLLECT')) {
+            const la = document.createElement('script');
+            la.charset = 'UTF-8';
+            la.id = 'LA_COLLECT';
+            la.src = '//sdk.51.la/js-sdk-pro.min.js';
+            document.head.appendChild(la);
+
+            const laInit = document.createElement('script');
+            laInit.text = 'LA.init({id:"3KHNju0NS6KdmK8g",ck:"3KHNju0NS6KdmK8g"});';
+            document.head.appendChild(laInit);
+        }
+
+        // Google AdSense
+        if (!document.querySelector('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
+            const adsense = document.createElement('script');
+            adsense.async = true;
+            adsense.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3594081485685271';
+            adsense.crossOrigin = 'anonymous';
+            document.head.appendChild(adsense);
+        }
+
+        // 百度统计
+        if (!document.querySelector('script[src*="hm.baidu.com/hm.js"]')) {
+            const baidu = document.createElement('script');
+            baidu.text = `
+                var _hmt = _hmt || [];
+                (function() {
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?7fdd626d87b4c2ab5afee04e5fcd0b9d";
+                    var s = document.getElementsByTagName("script")[0]; 
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            `;
+            document.head.appendChild(baidu);
+        }
+    }
+
+    // 在页面加载完成后执行
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', insertAnalytics);
+    } else {
+        insertAnalytics();
+    }
+
     // 创建独立的样式，避免与主网站样式冲突
     const style = document.createElement('style');
     style.textContent = `
