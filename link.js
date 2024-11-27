@@ -4,7 +4,8 @@ const links = [
         icon: '🖼️',
         items: [
             { text: '图片转Excel', url: 'https://img2excel.cdtools.click', description: '图片转 Excel 在线工具' },
-            { text: '图片压缩', url: 'https://compress.cdtools.click', description: '在线图片压缩工具，帮助你轻松压缩图片。' }
+            { text: '图片压缩', url: 'https://compress.cdtools.click', description: '在线图片压缩工具，帮助你轻松压缩图片。' },
+            { text: '图片分割工具', url: 'https://cut.cdtools.click', description: '专业的图片分割工具，支持朋友圈九宫格切图，完全免费且无限制使用。注重隐私保护，本地处理，永不上传。' }
         ]
     },
     {
@@ -36,7 +37,7 @@ const links = [
         items: [
             { text: '临时邮箱', url: 'https://email.cdtools.click', description: '一键工具临时邮箱提供免费、安全的临时邮箱服务。无需注册即可使用,帮助您保护隐私,避免垃圾邮件。' },
             { text: '学生证生成器', url: 'https://studentid.cdtools.click', description: '用户可以自定义学生证信息，并通过交互式界面实时预览效果。' },
-            { text: 'WGS-84转换器', url: 'https://cgcs2000.cdtools.click', description: 'WGS-84 至 CGCS2000 坐标转换器' }
+            { text: '国家2000坐标系转换', url: 'https://cgcs2000.cdtools.click', description: 'WGS-84 至 CGCS2000 坐标转换器' }
         ]
     },
     {
