@@ -209,7 +209,8 @@ const links = [
             align-items: center;
         }
 
-        #cdtools-menu .cdtools-theme-btn {
+        #cdtools-menu .cdtools-theme-btn,
+        #cdtools-menu .cdtools-close-btn {
             background: none;
             border: none;
             cursor: pointer;
@@ -219,10 +220,18 @@ const links = [
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 36px;
+            height: 36px;
         }
 
-        #cdtools-menu .cdtools-theme-btn:hover {
+        #cdtools-menu .cdtools-theme-btn:hover,
+        #cdtools-menu .cdtools-close-btn:hover {
             background: var(--cdtools-hover-bg);
+        }
+
+        #cdtools-menu .cdtools-close-btn {
+            font-size: 24px;
+            line-height: 1;
         }
 
         #cdtools-menu .theme-icon-light,
@@ -449,7 +458,11 @@ const links = [
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
                     </button>
-                    <button class="cdtools-close-btn">×</button>
+                    <button class="cdtools-close-btn" title="关闭">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
             <div class="cdtools-search">
