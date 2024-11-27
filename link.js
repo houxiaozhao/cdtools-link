@@ -1,3 +1,15 @@
+const CONFIG = {
+    analytics: {
+        baidu: '7fdd626d87b4c2ab5afee04e5fcd0b9d',
+        ga: 'ca-pub-3594081485685271',
+        la: '3KHNju0NS6KdmK8g'
+    },
+    ui: {
+        sidebarWidth: '384px',
+        mobileBreakpoint: '640px'
+    }
+};
+
 const links = [
     {
         title: '图片工具',
@@ -66,7 +78,7 @@ const links = [
             document.head.appendChild(la);
 
             const laInit = document.createElement('script');
-            laInit.text = 'LA.init({id:"3KHNju0NS6KdmK8g",ck:"3KHNju0NS6KdmK8g"});';
+            laInit.text = `LA.init({id:"${CONFIG.analytics.la}",ck:"${CONFIG.analytics.la}"});`;
             document.head.appendChild(laInit);
         }
 
@@ -74,7 +86,7 @@ const links = [
         if (!document.querySelector('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
             const adsense = document.createElement('script');
             adsense.async = true;
-            adsense.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3594081485685271';
+            adsense.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CONFIG.analytics.ga}`;
             adsense.crossOrigin = 'anonymous';
             document.head.appendChild(adsense);
         }
@@ -86,7 +98,7 @@ const links = [
                 var _hmt = _hmt || [];
                 (function() {
                     var hm = document.createElement("script");
-                    hm.src = "https://hm.baidu.com/hm.js?7fdd626d87b4c2ab5afee04e5fcd0b9d";
+                    hm.src = "https://hm.baidu.com/hm.js?${CONFIG.analytics.baidu}";
                     var s = document.getElementsByTagName("script")[0]; 
                     s.parentNode.insertBefore(hm, s);
                 })();
@@ -181,7 +193,7 @@ const links = [
             top: 0;
             bottom: 0;
             right: 0;
-            width: 384px;
+            width: ${CONFIG.ui.sidebarWidth};
             background: var(--cdtools-bg);
             z-index: 999999;
             transform: translateX(100%);
@@ -316,7 +328,7 @@ const links = [
             color: var(--cdtools-secondary-text);
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
         }
 
@@ -354,7 +366,7 @@ const links = [
             white-space: nowrap;
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: ${CONFIG.ui.mobileBreakpoint}) {
             #cdtools-menu .cdtools-sidebar {
                 width: 100%;
             }
@@ -401,6 +413,40 @@ const links = [
         #cdtools-menu .cdtools-sidebar.active {
             transform: translateX(0);
         }
+             .cdtools-item {
+        position: relative;
+      }
+      .cdtools-item:hover::after {
+        content: attr(data-description);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 10px 5px;
+        padding: 5px 10px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        max-width: 200px;
+        width: max-content;
+        white-space: normal;
+        word-wrap: break-word;
+        text-align: center;
+        z-index: 1000;
+        animation: tooltipFade 0.2s ease-in-out;
+      }
+
+      @keyframes tooltipFade {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
     `;
     document.head.appendChild(style);
 
@@ -501,7 +547,7 @@ const links = [
 
     // 获取主题按钮
     const themeBtn = container.querySelector('.cdtools-theme-btn');
-    
+
     // 检查本地存储的主题
     const savedTheme = localStorage.getItem('cdtools-theme');
     if (savedTheme === 'dark') {
