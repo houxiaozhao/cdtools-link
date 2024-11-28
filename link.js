@@ -40,7 +40,8 @@ const links = [
         title: '设计工具',
         icon: '🎨',
         items: [
-            { text: '配色工具', url: 'https://prism.cdtools.click', description: '专业的在线配色工具，帮助设计师和开发者创建和谐、一致且符合无障碍标准的配色方案' }
+            { text: '配色工具', url: 'https://prism.cdtools.click', description: '专业的在线配色工具，帮助设计师和开发者创建和谐、一致且符合无障碍标准的配色方案' },
+            { text: '在线画板工具', url: 'https://paint.cdtools.click', description: 'Paint Board是一款免费的在线画板工具，提供12种专业画笔和丰富的绘画功能。支持多端操作，注重用户隐私，让创作充满趣味性。我们的画板工具完全免费，无需下载，即开即用。提供自由绘画、形状绘制、图片编辑等多样功能，让您的艺术创作更加便捷有趣。' }
         ]
     },
     {
