@@ -76,11 +76,10 @@ const links = [
             la.charset = 'UTF-8';
             la.id = 'LA_COLLECT';
             la.src = '//sdk.51.la/js-sdk-pro.min.js';
+            la.onload = function() {
+                LA.init({id: CONFIG.analytics.la, ck: CONFIG.analytics.la});
+            };
             document.head.appendChild(la);
-
-            const laInit = document.createElement('script');
-            laInit.text = `LA.init({id:"${CONFIG.analytics.la}",ck:"${CONFIG.analytics.la}"});`;
-            document.head.appendChild(laInit);
         }
 
         // Google AdSense
