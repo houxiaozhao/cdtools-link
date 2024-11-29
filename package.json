@@ -1,0 +1,14 @@
+{
+  "name": "cdtools-link",
+  "version": "1.0.0",
+  "main": "link.js",
+  "scripts": {
+    "build": "terser original.js -c -m --mangle-props -o link.js"
+  },
+  "devDependencies": {
+    "terser": "^5.24.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
