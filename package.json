@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "link.js",
   "scripts": {
-    "build": "terser original.js -c -m --mangle-props -o link.js"
+    "build": "terser original.js -c -m --mangle-props -o link.js",
+    "dev": "nodemon --watch original.js --exec \"npm run build\""
   },
   "devDependencies": {
-    "terser": "^5.24.0"
+    "terser": "^5.24.0",
+    "anywhere": "^1.6.0",
+    "nodemon": "^3.0.1"
   },
   "author": "",
   "license": "ISC",

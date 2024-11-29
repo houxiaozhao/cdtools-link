@@ -50,7 +50,8 @@ const links = [
         items: [
             { text: '临时邮箱', url: 'https://email.cdtools.click', description: '一键工具临时邮箱提供免费、安全的临时邮箱服务。无需注册即可使用,帮助您保护隐私,避免垃圾邮件。' },
             { text: '学生证生成器', url: 'https://studentid.cdtools.click', description: '用户可以自定义学生证信息，并通过交互式界面实时预览效果。' },
-            { text: '国家2000坐标系转换', url: 'https://cgcs2000.cdtools.click', description: 'WGS-84 至 CGCS2000 坐标转换器' }
+            { text: '国家2000坐标系转换', url: 'https://cgcs2000.cdtools.click', description: 'WGS-84 至 CGCS2000 坐标转换器' },
+            { text: '静谧空间', url: 'https://peace.cdtools.click', description: '静谧空间(peace.cdtools.click)为您提供优质的白噪声、双耳节拍、自然环境声和冥想音频。包括白噪声、双耳节拍、蓝噪声、棕噪声、瀑布声等多种助眠音效，帮助您放松身心，改善睡眠质量。' },
         ]
     },
     {
