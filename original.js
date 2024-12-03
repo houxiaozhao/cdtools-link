@@ -476,18 +476,11 @@ const links = [
 
     container.innerHTML = `
         <div class="cdtools-fixed">
-            <a href="https://cdtools.click" 
-                target="_blank" 
-                class="cdtools-button">
-                <span class="cdtools-button-text">
-                    <span class="cdtools-hide-mobile">一键工具 - </span>
-                    <span>CDTools</span>
-                </span>
-            </a>
             <button class="cdtools-button" id="cdtools-toggle">
+                <span class="cdtools-hide-mobile" style='margin-right: 8px;'>更多工具</span>
                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-                </svg>
+                </svg>            
             </button>
         </div>
 
