@@ -58,7 +58,7 @@ const links = [
         title: '个人站点',
         icon: '👤',
         items: [
-            { text: '我的博客', url: 'https://blog.cdtools.click', description: 'houxiaozhao 部落格' }
+            { text: '我的博客', url: 'https://cdtools.click', description: 'houxiaozhao 部落格' }
         ]
     }
 ];
@@ -92,20 +92,15 @@ const links = [
             document.head.appendChild(adsense);
         }
 
-        // 百度统计
-        if (!document.querySelector('script[src*="hm.baidu.com/hm.js"]')) {
-            const baidu = document.createElement('script');
-            baidu.text = `
-                var _hmt = _hmt || [];
-                (function() {
-                    var hm = document.createElement("script");
-                    hm.src = "https://hm.baidu.com/hm.js?${CONFIG.analytics.baidu}";
-                    var s = document.getElementsByTagName("script")[0]; 
-                    s.parentNode.insertBefore(hm, s);
-                })();
-            `;
-            document.head.appendChild(baidu);
+        // Umami Analytics
+        if (!document.querySelector('script[src="https://umami.cdtools.click/cdtools"]')) {
+            const umami = document.createElement('script');
+            umami.defer = true;
+            umami.src = 'https://umami.cdtools.click/cdtools';
+            umami.setAttribute('data-website-id', 'be350bd5-41a1-455a-a1e9-cd875b0593d3');
+            document.head.appendChild(umami);
         }
+
     }
 
     // 在页面加载完成后执行
