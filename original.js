@@ -50,7 +50,6 @@ const links = [
         title: '实用工具',
         icon: '🛠️',
         items: [
-            { text: '临时邮箱', url: 'https://email.cdtools.click', description: '一键工具临时邮箱提供免费、安全的临时邮箱服务。无需注册即可使用,帮助您保护隐私,避免垃圾邮件。' },
             { text: '学生证生成器', url: 'https://studentid.cdtools.click', description: '用户可以自定义学生证信息，并通过交互式界面实时预览效果。' },
             { text: '静谧空间', url: 'https://peace.cdtools.click', description: '静谧空间(peace.cdtools.click)为您提供优质的白噪声、双耳节拍、自然环境声和冥想音频。包括白噪声、双耳节拍、蓝噪声、棕噪声、瀑布声等多种助眠音效，帮助您放松身心，改善睡眠质量。' },
             { text: '火车座位靠窗查询工具', url: 'https://seat.cdtools.click', description: '火车座位靠窗查询工具，帮助您查询火车座位是否靠窗。' },
@@ -81,26 +80,26 @@ const links = [
 
     // 添加统计和广告代码
     function insertAnalytics() {
-        // 51LA统计
-        if (!document.getElementById('LA_COLLECT')) {
-            const la = document.createElement('script');
-            la.charset = 'UTF-8';
-            la.id = 'LA_COLLECT';
-            la.src = '//sdk.51.la/js-sdk-pro.min.js';
-            la.onload = function () {
-                LA.init({ id: CONFIG.analytics.la, ck: CONFIG.analytics.la });
-            };
-            document.head.appendChild(la);
-        }
+        // // 51LA统计
+        // if (!document.getElementById('LA_COLLECT')) {
+        //     const la = document.createElement('script');
+        //     la.charset = 'UTF-8';
+        //     la.id = 'LA_COLLECT';
+        //     la.src = '//sdk.51.la/js-sdk-pro.min.js';
+        //     la.onload = function () {
+        //         LA.init({ id: CONFIG.analytics.la, ck: CONFIG.analytics.la });
+        //     };
+        //     document.head.appendChild(la);
+        // }
 
-        // Google AdSense
-        if (!document.querySelector('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
-            const adsense = document.createElement('script');
-            adsense.async = true;
-            adsense.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CONFIG.analytics.ga}`;
-            adsense.crossOrigin = 'anonymous';
-            document.head.appendChild(adsense);
-        }
+        // // Google AdSense
+        // if (!document.querySelector('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
+        //     const adsense = document.createElement('script');
+        //     adsense.async = true;
+        //     adsense.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CONFIG.analytics.ga}`;
+        //     adsense.crossOrigin = 'anonymous';
+        //     document.head.appendChild(adsense);
+        // }
 
         // Umami Analytics
         if (!document.querySelector('script[src="https://umami.cdtools.click/cdtools"]')) {
@@ -109,6 +108,16 @@ const links = [
             umami.src = 'https://umami.cdtools.click/cdtools';
             umami.setAttribute('data-website-id', 'be350bd5-41a1-455a-a1e9-cd875b0593d3');
             document.head.appendChild(umami);
+        }
+
+        // Ad Zone Script
+        if (!document.querySelector('script[src="https://alwingulla.com/88/tag.min.js"]')) {
+            const adScript = document.createElement('script');
+            adScript.src = 'https://alwingulla.com/88/tag.min.js';
+            adScript.setAttribute('data-zone', '118687');
+            adScript.async = true;
+            adScript.setAttribute('data-cfasync', 'false');
+            document.head.appendChild(adScript);
         }
 
     }
