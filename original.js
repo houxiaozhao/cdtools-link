@@ -110,15 +110,15 @@ const links = [
             document.head.appendChild(umami);
         }
 
-        // Ad Zone Script
-        if (!document.querySelector('script[src="https://alwingulla.com/88/tag.min.js"]')) {
-            const adScript = document.createElement('script');
-            adScript.src = 'https://alwingulla.com/88/tag.min.js';
-            adScript.setAttribute('data-zone', '118687');
-            adScript.async = true;
-            adScript.setAttribute('data-cfasync', 'false');
-            document.head.appendChild(adScript);
-        }
+        // // Ad Zone Script
+        // if (!document.querySelector('script[src="https://alwingulla.com/88/tag.min.js"]')) {
+        //     const adScript = document.createElement('script');
+        //     adScript.src = 'https://alwingulla.com/88/tag.min.js';
+        //     adScript.setAttribute('data-zone', '118687');
+        //     adScript.async = true;
+        //     adScript.setAttribute('data-cfasync', 'false');
+        //     document.head.appendChild(adScript);
+        // }
 
     }
 
