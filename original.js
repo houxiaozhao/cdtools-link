@@ -26,7 +26,8 @@ const links = [
         icon: '📄',
         items: [
             { text: 'PDF转扫描件', url: 'https://scan.cdtools.click', description: '能够让 PDF 看起来就像是扫描件一样的纯前端网站' },
-            { text: 'PDF合并工具', url: 'https://merge-pdf.cdtools.click', description: '在线PDF合并工具 - 快速、免费、安全的文档处理解决方案' }
+            { text: 'PDF合并工具', url: 'https://merge-pdf.cdtools.click', description: '在线PDF合并工具 - 快速、免费、安全的文档处理解决方案' },
+            { text: 'JPG 转 PDF', url: 'https://jpg2pdf.cdtools.click', description: '在线 JPG 转 PDF 工具，帮助你轻松转换 JPG 图片为 PDF 文档。' }
         ]
     },
     {
@@ -43,7 +44,8 @@ const links = [
         icon: '🎨',
         items: [
             { text: '配色工具', url: 'https://prism.cdtools.click', description: '专业的在线配色工具，帮助设计师和开发者创建和谐、一致且符合无障碍标准的配色方案' },
-            { text: '在线画板工具', url: 'https://paint.cdtools.click', description: 'Paint Board是一款免费的在线画板工具，提供12种专业画笔和丰富的绘画功能。支持多端操作，注重用户隐私，让创作充满趣味性。我们的画板工具完全免费，无需下载，即开即用。提供自由绘画、形状绘制、图片编辑等多样功能，让您的艺术创作更加便捷有趣。' }
+            { text: '在线画板工具', url: 'https://paint.cdtools.click', description: 'Paint Board是一款免费的在线画板工具，提供12种专业画笔和丰富的绘画功能。支持多端操作，注重用户隐私，让创作充满趣味性。我们的画板工具完全免费，无需下载，即开即用。提供自由绘画、形状绘制、图片编辑等多样功能，让您的艺术创作更加便捷有趣。' },
+            { text: 'PPT模板分享站', url: 'https://ppt.cdtools.click', description: 'PPT模板分享站，提供高质量的PPT模板，帮助您快速创建漂亮的PPT文稿。' }
         ]
     },
     {
