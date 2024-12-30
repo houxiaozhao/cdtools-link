@@ -66,10 +66,11 @@ const links = [
         ]
     },
     {
-        title: '个人站点',
+        title: '个人站点和其他网站',
         icon: '👤',
         items: [
-            { text: '我的博客', url: 'https://cdtools.click', description: 'houxiaozhao 部落格' }
+            { text: '我的博客', url: 'https://cdtools.click', description: 'houxiaozhao 部落格' },
+            { text: 'Histime - 历史影像', url: 'https://histime.cdtools.click', description: '以时间轴的形式回顾珍贵的历史瞬间' }
         ]
     }
 ];
