@@ -19,6 +19,7 @@ const links = [
             { text: '图片压缩', url: 'https://compress.cdtools.click', description: '在线图片压缩工具，帮助你轻松压缩图片。' },
             { text: 'AI 图片背景移除工具', url: 'https://removebg.cdtools.click', description: '快速移除图片背景，支持批量处理。完全本地处理，无需上传，保护隐私。' },
             { text: '图片分割工具', url: 'https://cut.cdtools.click', description: '专业的图片分割工具，支持朋友圈九宫格切图，完全免费且无限制使用。注重隐私保护，本地处理，永不上传。' },
+            { text: '在线图片水印工具', url: 'https://watermark.cdtools.click', description: '专业的在线图片水印工具，支持添加文字水印，完全免费且无限制使用。注重隐私保护，本地处理，永不上传。' },
             { text: 'EXIF数据分析工具', url: 'https://exif.cdtools.click', description: 'EXIF 照片元数据查看与分析工具：轻松获取照片详细信息' }
         ]
     },
